@@ -5,21 +5,21 @@
 class Sbomlyze < Formula
   desc "A fast, reliable SBOM diff and analysis tool"
   homepage "https://github.com/rezmoss/sbomlyze"
-  version "0.3.7"
+  version "0.4.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.3.7/sbomlyze_0.3.7_Darwin_x86_64.tar.gz"
-      sha256 "003edad10cde683f57d8b80dadf5b4ad047086385478ee5191fa208057a7d562"
+      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.4.0/sbomlyze_0.4.0_Darwin_x86_64.tar.gz"
+      sha256 "9c3bdfec537e3a114c65536e89b56c523fc300240ed99d0947ffc6c3fb10d353"
 
       define_method(:install) do
         bin.install "sbomlyze"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.3.7/sbomlyze_0.3.7_Darwin_arm64.tar.gz"
-      sha256 "03bc109eb5c28eb81b4f67074d33245b26ff22ec4514e4d051235c3b42cb8a1c"
+      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.4.0/sbomlyze_0.4.0_Darwin_arm64.tar.gz"
+      sha256 "99494e0ac29472c0d8cf687baf4d7beb4177021faa1b153ddca0666cbecc3c70"
 
       define_method(:install) do
         bin.install "sbomlyze"
@@ -29,22 +29,22 @@ class Sbomlyze < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.3.7/sbomlyze_0.3.7_Linux_x86_64.tar.gz"
-      sha256 "95a30a2f493de4d9a68e57d7e04a392b1a935018d5f1bc82d4a2520a89b301a2"
+      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.4.0/sbomlyze_0.4.0_Linux_x86_64.tar.gz"
+      sha256 "b05852744c0d81c6d11c8a655c7ca39b71c60b324dbf56ed6ee7e7783b1112e8"
       define_method(:install) do
         bin.install "sbomlyze"
       end
     end
     if Hardware::CPU.arm? && !Hardware::CPU.is_64_bit?
-      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.3.7/sbomlyze_0.3.7_Linux_armv6.tar.gz"
-      sha256 "18630f77cc2d5a7ec5c756355295d6f18fec068204b3981225711335e1408bee"
+      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.4.0/sbomlyze_0.4.0_Linux_armv6.tar.gz"
+      sha256 "f7a0139b535035ccce0577d9e5a215700263fd878c26369c2d56f1462d2fdd96"
       define_method(:install) do
         bin.install "sbomlyze"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.3.7/sbomlyze_0.3.7_Linux_arm64.tar.gz"
-      sha256 "5cea8681bb292340f98ade530d5ff04b16fd5a3c46308b060d5e7b6298b80145"
+      url "https://github.com/rezmoss/sbomlyze/releases/download/v0.4.0/sbomlyze_0.4.0_Linux_arm64.tar.gz"
+      sha256 "4bdec1bf5215d2097870eb912f449c6aa47b1950cda8ef4a2b46b23d03fe6e0a"
       define_method(:install) do
         bin.install "sbomlyze"
       end
